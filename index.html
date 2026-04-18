@@ -1,68 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shekolla Sai Kiran | Senior Software Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        header { text-align: center; padding-bottom: 20px; }
-        h1 { color: #333; }
-        .section { margin-bottom: 20px; }
-        .section h2 { color: #444; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-        ul { list-style-type: square; }
-        a { color: #0073e6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { text-align: center; font-size: 0.9em; color: #777; padding-top: 20px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sai Kiran Shekolla — Senior Software Engineer</title>
+  <meta name="description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --fg: #e8ecf1;
+      --muted: #9aa3af;
+      --accent: #7cc4ff;
+      --card: #161a21;
+      --border: #23282f;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#fafafa; --fg:#111; --muted:#555; --accent:#0969da; --card:#fff; --border:#e4e4e7; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+    header h1 { font-size: 1.8rem; margin: 0 0 4px; }
+    header p.tagline { color: var(--muted); margin: 0 0 20px; }
+    nav a { color: var(--accent); text-decoration: none; margin-right: 14px; }
+    nav a:hover { text-decoration: underline; }
+    h2 { font-size: 1.15rem; margin: 40px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    h3 { font-size: 1rem; margin: 20px 0 2px; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 8px; }
+    ul { padding-left: 20px; margin: 6px 0 14px; }
+    li { margin: 3px 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+    .chip { font-size: 0.8rem; color: var(--muted); border: 1px solid var(--border);
+      padding: 2px 8px; border-radius: 999px; }
+    footer { color: var(--muted); font-size: 0.9rem; margin-top: 48px; }
+    a { color: var(--accent); }
+  </style>
 </head>
 <body>
+<main>
+  <header>
+    <h1>Sai Kiran Shekolla</h1>
+    <p class="tagline">Senior Software Engineer — scalable systems, healthcare data, ETL, infra.</p>
+    <nav>
+      <a href="https://github.com/shekolla">GitHub</a>
+      <a href="https://www.linkedin.com/in/shekolla/">LinkedIn</a>
+      <a href="https://twitter.com/ShekollaSai">Twitter</a>
+      <a href="mailto:shekollasaikiran@gmail.com">Email</a>
+    </nav>
+  </header>
 
-<header>
-    <h1>Hi, I'm Shekolla Sai Kiran!</h1>
-    <p>Senior Software Engineer | Financial & Medical Technology Specialist</p>
-</header>
+  <section>
+    <h2>About</h2>
+    <p>Curious engineer. I build backends that stay fast under load, data pipelines that don't silently drop rows, and infra that costs less than the managed alternative without cutting corners on security. Currently at Dexur, working on healthcare data at scale.</p>
+    <div class="chips">
+      <span class="chip">AWS</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">OpenSearch</span>
+      <span class="chip">Airflow</span>
+      <span class="chip">Docker</span>
+      <span class="chip">Kafka</span>
+      <span class="chip">Redis</span>
+      <span class="chip">NGINX</span>
+      <span class="chip">Python</span>
+      <span class="chip">Go</span>
+      <span class="chip">LLMs / NLP</span>
+      <span class="chip">Healthcare data</span>
+    </div>
+  </section>
 
-<section class="section">
-    <h2>About Me</h2>
-    <p>I'm passionate about building scalable and robust systems in financial and medical domains. My expertise includes machine learning, infrastructure optimization, systems design, and software engineering.</p>
-</section>
+  <section>
+    <h2>Experience</h2>
 
-<section class="section">
-    <h2>Professional Experience</h2>
+    <h3>Dexur — Senior Software Engineer</h3>
+    <p class="meta">May 2024 – Present · Hyderabad, India</p>
+    <p>Healthcare data platform: analytics, search, and ingestion at scale.</p>
     <ul>
-        <li><strong>Dexur Pvt Ltd (May 2024 - Present):</strong> Infrastructure optimization, AWS management, and high-performance system architectures.</li>
-        <li><strong>Finoramic (Jun 2019 - May 2024):</strong> AI-driven financial tools, GPU-based systems, and data parsing solutions.</li>
-        <li><strong>Gridlex (Jun 2018 - May 2019):</strong> Machine learning-driven financial portfolio management.</li>
-        <li><strong>Accenture (Mar 2017 - May 2018):</strong> Web automation and data scraping solutions.</li>
+      <li>Built Airflow + Docker ETL pipelines feeding PostgreSQL and OpenSearch — incremental loads, retries, daily reconciliation.</li>
+      <li>Split reads onto dedicated PostgreSQL replicas; denormalized hot data into OpenSearch — aggregations went from seconds to sub-second.</li>
+      <li>Tuned Apache Superset (caching, server-side timeouts, query rewrites) — dashboards usable under real load.</li>
+      <li>Hardened infra with NGINX reverse proxy, rate limiting, IP blocking; cleaned up IAM / security groups; designed VPN + VPC for client message ingestion.</li>
+      <li>Stood up a bastion / jumpserver-style access layer for production — every session logged, audit-ready, cost far below managed equivalents.</li>
+      <li>Configured OpenSearch cross-cluster + cross-region replication for disaster recovery.</li>
+      <li>Event-driven pipelines on S3, SQS, Lambda, Kafka, Redis; automated ops with systemd, cron, CloudWatch alarms, daily reports.</li>
     </ul>
-</section>
 
-<section class="section">
-    <h2>Hobbies & Interests</h2>
+    <h3>Finoramic (Figg) — Senior Software Engineer</h3>
+    <p class="meta">Jun 2019 – May 2024 · Hyderabad, India</p>
+    <p>Personal-finance platform parsing millions of bank statements.</p>
     <ul>
-        <li>Learning New Technologies</li>
-        <li>Automation</li>
-        <li>Bike Riding</li>
-        <li>Gaming</li>
-        <li>Table Tennis</li>
+      <li>Finance chatbot on open-source LLMs with intent + entity recognition.</li>
+      <li>In-house NLP engine for financial PDFs — custom data structures, parser confidence scoring, 90–95% accuracy.</li>
+      <li>RealTimeGPU — parallel GPU system for password recovery, order-of-magnitude faster.</li>
+      <li>PopplerLambda — serverless document processing.</li>
+      <li>Insurance + investment modules, bank-statement profile extraction, Golang REST wrappers, testing framework for the parser.</li>
     </ul>
-</section>
 
-<section class="section">
-    <h2>Connect with Me</h2>
+    <h3>Gridlex — Machine Learning Engineer</h3>
+    <p class="meta">Jun 2018 – May 2019 · Hyderabad, India</p>
     <ul>
-        <li>Email: <a href="mailto:shekollasaikiran@gmal.com">shekollasaikiran@gmal.com</a></li>
-        <li><a href="https://www.linkedin.com/in/shekolla/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/ShekollaSai" target="_blank">Twitter</a></li>
-        <li><a href="https://github.com/shekolla" target="_blank">GitHub</a></li>
+      <li>Correlation-based portfolio construction (Pearson + alternatives) over historical stock data.</li>
+      <li>Neural-net models on 50+ financial indicators.</li>
+      <li>Django front-end for portfolio management.</li>
     </ul>
-</section>
 
-<footer>
-    <script>document.write(`© ${new Date().getFullYear()} Shekolla Sai Kiran. All rights reserved.`);</script>
-</footer>
+    <h3>Accenture — Software Engineer</h3>
+    <p class="meta">Mar 2017 – May 2018 · Hyderabad, India</p>
+    <ul>
+      <li>Web automation + scraping tools in Python / BeautifulSoup for enterprise clients.</li>
+    </ul>
+  </section>
 
+  <section>
+    <h2>Education</h2>
+    <p>B.Tech, Electrical and Electronics Engineering — JB Institute of Engineering and Technology (2012 – 2016)</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <p>Claude Code 101 — Certificate of completion</p>
+  </section>
+
+  <footer>
+    <p>Open to collaboration on healthcare data, infra, or ML problems. <a href="mailto:shekollasaikiran@gmail.com">Get in touch</a>.</p>
+  </footer>
+</main>
 </body>
 </html>
