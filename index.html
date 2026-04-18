@@ -76,7 +76,7 @@
     <p class="meta">May 2024 – Present · Hyderabad, India</p>
     <p>Healthcare data platform: analytics, search, and ingestion at scale.</p>
     <ul>
-      <li>Built Airflow + Docker ETL pipelines feeding PostgreSQL and OpenSearch — incremental loads, retries, daily reconciliation.</li>
+      <li>Built Airflow + Docker pipelines that ingest clinical data in a variety of formats — parse, normalize, compute clinical metrics, flag outcomes, index into OpenSearch, and feed downstream Superset dashboards. Retries, alarms, and daily reconciliation throughout.</li>
       <li>Split reads onto dedicated PostgreSQL replicas; denormalized hot data into OpenSearch — aggregations went from seconds to sub-second.</li>
       <li>Tuned Apache Superset (caching, server-side timeouts, query rewrites) — dashboards usable under real load.</li>
       <li>Hardened infra with NGINX reverse proxy, rate limiting, IP blocking; cleaned up IAM / security groups; designed VPN + VPC for client message ingestion.</li>
