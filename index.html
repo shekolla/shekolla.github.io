@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sai Kiran Shekolla — Senior Software Engineer</title>
   <meta name="description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙</text></svg>">
+  <meta property="og:title" content="Sai Kiran Shekolla — Senior Software Engineer" />
+  <meta property="og:description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shekolla.github.io" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ShekollaSai" />
+  <meta name="twitter:title" content="Sai Kiran Shekolla — Senior Software Engineer" />
+  <meta name="twitter:description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
   <style>
     :root {
       --bg: #0f1115;
@@ -35,6 +44,13 @@
       padding: 2px 8px; border-radius: 999px; }
     footer { color: var(--muted); font-size: 0.9rem; margin-top: 48px; }
     a { color: var(--accent); }
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 560px) { .project-grid { grid-template-columns: 1fr; } }
+    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; transition: border-color .15s; }
+    .project-card:hover { border-color: var(--accent); }
+    .project-card h3 { margin: 0 0 6px; font-size: 1rem; }
+    .project-card p { margin: 0 0 10px; font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+    .project-card a { font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -66,6 +82,56 @@
       <span class="chip">Go</span>
       <span class="chip">LLMs / NLP</span>
       <span class="chip">Healthcare data</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Daypage</h3>
+        <p>Self-hosted daily standup tracker with multi-team priorities, sub-tasks, due dates, snooze, and Google Chat webhook posts.</p>
+        <div class="chips" style="margin-bottom:10px;">
+          <span class="chip">React</span>
+          <span class="chip">Express</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">Docker</span>
+        </div>
+        <a href="https://github.com/shekolla/daypage" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Prepfast</h3>
+        <p>Revise any tech topic in under 1 hour. High-signal interview prep for mid-to-senior engineers.</p>
+        <div class="chips" style="margin-bottom:10px;">
+          <span class="chip">TypeScript</span>
+        </div>
+        <a href="https://github.com/shekolla/prepfast" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>FinBERT Sentiment</h3>
+        <p>Financial sentiment analysis on earnings calls and news using FinBERT, a BERT model fine-tuned on financial text.</p>
+        <div class="chips" style="margin-bottom:10px;">
+          <span class="chip">Python</span>
+          <span class="chip">NLP</span>
+          <span class="chip">FinBERT</span>
+        </div>
+        <a href="https://github.com/shekolla/finbert-financial-sentiment" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Poppler for ARM64 Lambda</h3>
+        <p>Poppler binary layer for arm64 AWS Lambda — Docker-built, drop-in for serverless PDF processing workloads.</p>
+        <div class="chips" style="margin-bottom:10px;">
+          <span class="chip">Docker</span>
+          <span class="chip">AWS Lambda</span>
+          <span class="chip">arm64</span>
+        </div>
+        <a href="https://github.com/shekolla/poppler_for_arm64_aws_lambda" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+
     </div>
   </section>
 
