@@ -6,14 +6,40 @@
   <title>Sai Kiran Shekolla — Senior Software Engineer</title>
   <meta name="description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%230f1115%22/><text x=%2250%22 y=%2268%22 font-family=%22system-ui,sans-serif%22 font-size=%2248%22 font-weight=%22700%22 fill=%22%237cc4ff%22 text-anchor=%22middle%22>SK</text></svg>">
+
   <meta property="og:title" content="Sai Kiran Shekolla — Senior Software Engineer" />
   <meta property="og:description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shekolla.github.io" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://shekolla.github.io/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ShekollaSai" />
   <meta name="twitter:title" content="Sai Kiran Shekolla — Senior Software Engineer" />
   <meta name="twitter:description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
+  <meta name="twitter:image" content="https://shekolla.github.io/og-image.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sai Kiran Shekolla",
+    "url": "https://shekolla.github.io",
+    "jobTitle": "Senior Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Dexur"
+    },
+    "sameAs": [
+      "https://github.com/shekolla",
+      "https://www.linkedin.com/in/shekolla/",
+      "https://twitter.com/ShekollaSai"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0f1115;
@@ -27,8 +53,10 @@
       :root { --bg:#fafafa; --fg:#111; --muted:#555; --accent:#0969da; --card:#fff; --border:#e4e4e7; }
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
       font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
     main { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
     header h1 { font-size: 1.8rem; margin: 0 0 4px; }
     header p.tagline { color: var(--muted); margin: 0 0 20px; }
@@ -39,9 +67,14 @@
     .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 8px; }
     ul { padding-left: 20px; margin: 6px 0 14px; }
     li { margin: 3px 0; }
-    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
     .chip { font-size: 0.8rem; color: var(--muted); border: 1px solid var(--border);
       padding: 2px 8px; border-radius: 999px; }
+    .skill-groups { display: flex; flex-direction: column; gap: 8px; margin: 14px 0 0; }
+    .skill-group { display: flex; align-items: flex-start; gap: 12px; }
+    .skill-label { font-size: 0.78rem; color: var(--muted); min-width: 88px; padding-top: 3px; flex-shrink: 0; opacity: 0.7; }
+    .currently { color: var(--muted); font-size: 0.875rem; margin: 10px 0 0;
+      border-left: 2px solid var(--accent); padding-left: 10px; }
     footer { color: var(--muted); font-size: 0.9rem; margin-top: 48px; }
     a { color: var(--accent); }
     .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -50,7 +83,9 @@
     .project-card:hover { border-color: var(--accent); }
     .project-card h3 { margin: 0 0 6px; font-size: 1rem; }
     .project-card p { margin: 0 0 10px; font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
-    .project-card a { font-size: 0.85rem; }
+    .project-card .chips { margin-bottom: 10px; }
+    .card-links { display: flex; gap: 12px; margin-top: 10px; }
+    .card-links a { font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -62,6 +97,7 @@
       <a href="https://github.com/shekolla">GitHub</a>
       <a href="https://www.linkedin.com/in/shekolla/">LinkedIn</a>
       <a href="https://twitter.com/ShekollaSai">Twitter</a>
+      <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="mailto:shekollasaikiran@gmail.com">Email</a>
     </nav>
   </header>
@@ -69,19 +105,40 @@
   <section>
     <h2>About</h2>
     <p>Curious engineer. I build backends that stay fast under load, data pipelines that don't silently drop rows, and infra that costs less than the managed alternative without cutting corners on security. Currently at Dexur, working on healthcare data at scale.</p>
-    <div class="chips">
-      <span class="chip">AWS</span>
-      <span class="chip">PostgreSQL</span>
-      <span class="chip">OpenSearch</span>
-      <span class="chip">Airflow</span>
-      <span class="chip">Docker</span>
-      <span class="chip">Kafka</span>
-      <span class="chip">Redis</span>
-      <span class="chip">NGINX</span>
-      <span class="chip">Python</span>
-      <span class="chip">Go</span>
-      <span class="chip">LLMs / NLP</span>
-      <span class="chip">Healthcare data</span>
+    <p class="currently">Currently: scaling OpenSearch ingestion and clinical data pipelines at Dexur; exploring LLM-assisted NLP for healthcare records.</p>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <span class="skill-label">Languages</span>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Go</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">Cloud / Infra</span>
+        <div class="chips">
+          <span class="chip">AWS</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kafka</span>
+          <span class="chip">Redis</span>
+          <span class="chip">NGINX</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">Data</span>
+        <div class="chips">
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">OpenSearch</span>
+          <span class="chip">Airflow</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">Domain</span>
+        <div class="chips">
+          <span class="chip">Healthcare data</span>
+          <span class="chip">LLMs / NLP</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -91,45 +148,55 @@
 
       <div class="project-card">
         <h3>Daypage</h3>
-        <p>Self-hosted daily standup tracker with multi-team priorities, sub-tasks, due dates, snooze, and Google Chat webhook posts.</p>
-        <div class="chips" style="margin-bottom:10px;">
+        <p>Self-hosted standup tracker. Built because no hosted tool combined multi-team priorities, sub-tasks, snooze, and direct Google Chat posts without a per-seat subscription.</p>
+        <div class="chips">
           <span class="chip">React</span>
           <span class="chip">Express</span>
           <span class="chip">SQLite</span>
           <span class="chip">Docker</span>
         </div>
-        <a href="https://github.com/shekolla/daypage" target="_blank" rel="noopener">GitHub →</a>
+        <div class="card-links">
+          <a href="https://github.com/shekolla/daypage" target="_blank" rel="noopener">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card">
         <h3>Prepfast</h3>
-        <p>Revise any tech topic in under 1 hour. High-signal interview prep for mid-to-senior engineers.</p>
-        <div class="chips" style="margin-bottom:10px;">
+        <p>Revise any tech topic — systems design, databases, networking — in under 1 hour. Structured, high-signal prep for mid-to-senior engineers who just need a fast refresh.</p>
+        <div class="chips">
           <span class="chip">TypeScript</span>
+          <span class="chip">Next.js</span>
         </div>
-        <a href="https://github.com/shekolla/prepfast" target="_blank" rel="noopener">GitHub →</a>
+        <div class="card-links">
+          <a href="https://prepfast.in" target="_blank" rel="noopener">Live →</a>
+          <a href="https://github.com/shekolla/prepfast" target="_blank" rel="noopener">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card">
         <h3>FinBERT Sentiment</h3>
-        <p>Financial sentiment analysis on earnings calls and news using FinBERT, a BERT model fine-tuned on financial text.</p>
-        <div class="chips" style="margin-bottom:10px;">
+        <p>Financial sentiment pipeline using FinBERT (BERT fine-tuned on financial text). Classifies earnings call transcripts and news as positive / negative / neutral to surface market signals.</p>
+        <div class="chips">
           <span class="chip">Python</span>
           <span class="chip">NLP</span>
           <span class="chip">FinBERT</span>
         </div>
-        <a href="https://github.com/shekolla/finbert-financial-sentiment" target="_blank" rel="noopener">GitHub →</a>
+        <div class="card-links">
+          <a href="https://github.com/shekolla/finbert-financial-sentiment" target="_blank" rel="noopener">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card">
         <h3>Poppler for ARM64 Lambda</h3>
-        <p>Poppler binary layer for arm64 AWS Lambda — Docker-built, drop-in for serverless PDF processing workloads.</p>
-        <div class="chips" style="margin-bottom:10px;">
+        <p>Poppler binary compiled for arm64 AWS Lambda. Docker-built, drop-in layer for serverless PDF processing — saves hours fighting Lambda's runtime environment.</p>
+        <div class="chips">
           <span class="chip">Docker</span>
           <span class="chip">AWS Lambda</span>
           <span class="chip">arm64</span>
         </div>
-        <a href="https://github.com/shekolla/poppler_for_arm64_aws_lambda" target="_blank" rel="noopener">GitHub →</a>
+        <div class="card-links">
+          <a href="https://github.com/shekolla/poppler_for_arm64_aws_lambda" target="_blank" rel="noopener">GitHub →</a>
+        </div>
       </div>
 
     </div>
@@ -180,11 +247,6 @@
   <section>
     <h2>Education</h2>
     <p>B.Tech, Electrical and Electronics Engineering — JB Institute of Engineering and Technology (2012 – 2016)</p>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <p>Claude Code 101 — Certificate of completion</p>
   </section>
 
   <footer>
