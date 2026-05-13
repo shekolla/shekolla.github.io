@@ -6,6 +6,7 @@
   <title>Sai Kiran Shekolla — Senior Software Engineer</title>
   <meta name="description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%230f1115%22/><text x=%2250%22 y=%2268%22 font-family=%22system-ui,sans-serif%22 font-size=%2248%22 font-weight=%22700%22 fill=%22%237cc4ff%22 text-anchor=%22middle%22>SK</text></svg>">
+  <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
 
   <meta property="og:title" content="Sai Kiran Shekolla — Senior Software Engineer" />
   <meta property="og:description" content="Senior Software Engineer working on scalable systems, healthcare data, ETL, and infrastructure." />
@@ -52,6 +53,8 @@
     @media (prefers-color-scheme: light) {
       :root { --bg:#fafafa; --fg:#111; --muted:#555; --accent:#0969da; --card:#fff; --border:#e4e4e7; }
     }
+    [data-theme="light"] { --bg:#fafafa; --fg:#111; --muted:#555; --accent:#0969da; --card:#fff; --border:#e4e4e7; }
+    [data-theme="dark"]  { --bg:#0f1115; --fg:#e8ecf1; --muted:#9aa3af; --accent:#7cc4ff; --card:#161a21; --border:#23282f; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
@@ -86,6 +89,9 @@
     .project-card .chips { margin-bottom: 10px; }
     .card-links { display: flex; gap: 12px; margin-top: 10px; }
     .card-links a { font-size: 0.85rem; }
+    .theme-toggle { background: none; border: 1px solid var(--border); color: var(--muted);
+      cursor: pointer; font-size: 0.85rem; padding: 1px 7px; border-radius: 999px; vertical-align: middle; }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
   </style>
 </head>
 <body>
@@ -99,6 +105,7 @@
       <a href="https://twitter.com/ShekollaSai">Twitter</a>
       <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="mailto:shekollasaikiran@gmail.com">Email</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour scheme">☀</button>
     </nav>
   </header>
 
@@ -253,5 +260,22 @@
     <p>Open to collaboration on healthcare data, infra, or ML problems. <a href="mailto:shekollasaikiran@gmail.com">Get in touch</a>.</p>
   </footer>
 </main>
+<script data-goatcounter="https://shekolla.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var stored = localStorage.getItem('theme');
+  var isDark = stored ? stored === 'dark' : prefersDark;
+  btn.textContent = isDark ? '☀' : '☾';
+  btn.addEventListener('click', function() {
+    var cur = document.documentElement.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    btn.textContent = next === 'dark' ? '☀' : '☾';
+  });
+})();
+</script>
 </body>
 </html>
